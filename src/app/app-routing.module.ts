@@ -7,25 +7,25 @@ export const routes: Routes = [
     redirectTo: 'home', 
     pathMatch: 'full'
   },
-  { 
-    path: 'login', 
-    loadChildren: 'app/components/login/login.module#LoginModule'
-  },
-  { 
-    path: 'welcome', 
-    loadChildren: 'app/components/welcome/welcome.module#WelcomeModule',
-    canActivate: [AuthGaurdService] 
-  },
-  { 
-    path: 'updateProfile', 
-    loadChildren: 'app/components/update-profile/update-profile.module#UpdateProfileModule',
-    canActivate: [AuthGaurdService] 
-  },
-  { 
-    path: 'createClass', 
-    loadChildren: 'app/components/create-class/create-class.module#CreateClassModule',
-    canActivate: [AuthGaurdService] 
-  },
+  // { 
+  //   path: 'login', 
+  //   loadChildren: 'app/components/login/login.module#LoginModule'
+  // },
+  // { 
+  //   path: 'welcome', 
+  //   loadChildren: 'app/components/welcome/welcome.module#WelcomeModule',
+  //   canActivate: [AuthGaurdService] 
+  // },
+  // { 
+  //   path: 'updateProfile', 
+  //   loadChildren: 'app/components/update-profile/update-profile.module#UpdateProfileModule',
+  //   canActivate: [AuthGaurdService] 
+  // },
+  // { 
+  //   path: 'createClass', 
+  //   loadChildren: 'app/components/create-class/create-class.module#CreateClassModule',
+  //   canActivate: [AuthGaurdService] 
+  // },
 ];
 
 @NgModule({
