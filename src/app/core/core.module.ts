@@ -8,11 +8,11 @@ import { CommonModule }      from '@angular/common';
 import {HeaderComponent} from '../components/header/header.component';
 import {firebaseConifg} from '../firebase-config';
 import {AppRoutingModule} from '../app-routing.module';
- import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 
 @NgModule({
-  imports:      [ NgbModule.forRoot(), CommonModule, firebaseConifg,AppRoutingModule ],
+  imports:      [  CommonModule, firebaseConifg,AppRoutingModule ],
   declarations: [ HeaderComponent ],
   exports:      [ HeaderComponent, AppRoutingModule ],
   providers:    [  ]
