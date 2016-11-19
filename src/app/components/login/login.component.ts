@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseService } from '../../services/firebase/firebase.service'
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Rx';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+    username: string;
+  password: string;
+
+  constructor(public fb: FirebaseService) { }
 
   ngOnInit() {
+      console.log('login logged');
   }
+
+  login(): void {
+    this.fb.login(this.username, this.password);
+  }
+
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import {FirebaseService} from '../../services/firebase/firebase.service'
+ import {FirebaseService} from '../../services/firebase/firebase.service'
 
 @Component({
   selector: 'app-header',
@@ -9,16 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent {//implements OnInit {
 
-  constructor() { }
-//public fb : FirebaseService
+  constructor(public fb : FirebaseService) { }
+
   public loggedIn : boolean = false;
-  // ngOnInit() {
-  //   this.fb.checkLoggedIn().subscribe(value => this.loggedIn = value);
-  // }
+  ngOnInit() {
+    this.fb.checkLoggedIn().subscribe(value => this.loggedIn = value);
+  }
 
 
   logout() : void {
-    //this.fb.logOut();
+    this.fb.logOut();
   }
 
 }
