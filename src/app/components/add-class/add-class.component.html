@@ -1,0 +1,87 @@
+<div class="modal fade" id="addClassModal" tabindex="-1" role="dialog" aria-labelledby="addClassModal" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<label for="startHour">Start Hour</label>
+				<div class="input-group">
+					<input type="text" [(ngModel)]='startHour' [ngModelOptions]="{standalone: true}" class="form-control" id="startHour" aria-describedby="basic-addon3">
+				</div>
+				<br>
+
+				<label for="startMin">Start Min</label>
+				<div class="input-group">
+					<input type="text" [(ngModel)]='startMin' [ngModelOptions]="{standalone: true}" class="form-control" id="startMin" aria-describedby="basic-addon3">
+				</div>
+				<br>
+
+				<label for="endHour">End Hour</label>
+				<div class="input-group">
+					<input type="text" [(ngModel)]='endHour' [ngModelOptions]="{standalone: true}" class="form-control" id="endHour" aria-describedby="basic-addon3">
+				</div>
+				<br>
+
+				<label for="endMin">End Min</label>
+				<div class="input-group">
+					<input type="text" [(ngModel)]='endMin' [ngModelOptions]="{standalone: true}" class="form-control" id="endMin" aria-describedby="basic-addon3">
+				</div>
+				<br>
+ <div class="input-group">
+        <input type="checkbox" [(ngModel)]='monday' [ngModelOptions]="{standalone: true}" aria-label="...">
+	  <label >Monday</label>
+	   <input type="checkbox" [(ngModel)]='tuesday' [ngModelOptions]="{standalone: true}" aria-label="...">
+	  <label >tuesday</label>
+	   <input type="checkbox" [(ngModel)]='wednesday' [ngModelOptions]="{standalone: true}" aria-label="...">
+	  <label >wednesday</label>
+	   <input type="checkbox" [(ngModel)]='thursday' [ngModelOptions]="{standalone: true}" aria-label="...">
+	  <label >thursday</label>
+	   <input type="checkbox" [(ngModel)]='friday' [ngModelOptions]="{standalone: true}" aria-label="...">
+	  <label >friday</label>
+	   <input type="checkbox" [(ngModel)]='saturday' [ngModelOptions]="{standalone: true}" aria-label="...">
+	  <label >saturday</label>
+	   <input type="checkbox" [(ngModel)]='sunday' [ngModelOptions]="{standalone: true}" aria-label="...">
+	  <label >sunday</label>
+	  
+    </div>
+
+
+
+				<div id="accordion" role="tablist" aria-multiselectable="true">
+					<div class="card">
+						<div class="card-header" role="tab" id="headingOne">
+							<h5 class="mb-0">
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Intructor sort
+        </a>
+							</h5>
+						</div>
+
+						<div id="collapseOne" class="collapse in" role="tabpanel" aria-labelledby="headingOne">
+							<div class="card-block">
+								<instructor-search (value)='$event'></instructor-search>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" role="tab" id="headingTwo">
+							<h5 class="mb-0">
+								<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+         Course Search
+        </a>
+							</h5>
+						</div>
+						<div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+							<div class="card-block">
+								<course-search></course-search>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button (click)='submit()' type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">Submit</span>
+          </button>
+			</div>
+		</div>
+	</div>
+</div>
