@@ -26,6 +26,11 @@ export const routes: Routes = [
     loadChildren: 'app/components/create-class/create-class.module#CreateClassModule',
     canActivate: [AuthGaurdService] 
   },
+
+  { 
+    path: 'register', 
+    loadChildren: 'app/components/register/register.module#RegisterModule'
+  },
 ];
 
 @NgModule({
