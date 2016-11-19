@@ -10,6 +10,7 @@ export class ClassModel {
     startDate: string;
     endDate: string;
     Days : {} = {};
+    Files : {} = {};
 
     public addDay(key, value){
         this.Days[key] = value;
@@ -112,6 +113,10 @@ export class ClassService implements OnDestroy {
         this.classSubscription.unsubscribe();
     }
 
+    public updateClasee(classKey : string, object : {}) : void {
+        this._af.database.list('Class').update(classKey, object);
+    }
+
     public add(entity: ClassModel) : string {
        // if (!entity) return console.log('invalid entity!');
 
@@ -158,6 +163,7 @@ export class ClassService implements OnDestroy {
             tempUser[entity.userKey] = true;
             console.log(entity.userKey);
             delete entity.userKey;
+
 
             delete entity.$key; // we dont want to push this into our firebase-database ..
             this._af.database.list('/Class').update(key, entity); // update entry

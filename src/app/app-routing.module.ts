@@ -11,6 +11,10 @@ export const routes: Routes = [
     path: 'login', 
     loadChildren: 'app/components/login/login.module#LoginModule'
   },
+    { 
+    path: 'my-schedule', 
+    loadChildren: 'app/components/my-schedule/my-schedule.module#MyScheduleModule'
+  },
   
   { 
     path: 'register', 

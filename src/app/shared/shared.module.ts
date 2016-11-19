@@ -10,11 +10,13 @@ import {UserService} from '../services/user/user.service';
 import {InstructorService} from '../services/instructor/instructor.service';
 import {CourseService} from '../services/courses/course.service';
 
+import {FilesService} from '../services/files/file.service';
+
 
 @NgModule({
   imports:      [ CommonModule ],
   declarations: [],
-  providers: [FirebaseService, ClassService, ScheduleService, UserService, InstructorService, CourseService],
+  providers: [FilesService,FirebaseService, ClassService, ScheduleService, UserService, InstructorService, CourseService],
   exports:      [ CommonModule, FormsModule,HttpModule,NgbModule]
 })
 

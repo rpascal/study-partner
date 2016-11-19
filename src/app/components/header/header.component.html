@@ -17,4 +17,7 @@
           <div class="nav-link"  routerLink="/user-schedules">View Scheudule</div>
         </li>
       </ul>
+        <li class="nav-item" *ngIf="loggedIn">
+          <div class="nav-link"  routerLink="/my-schedule">My Scheudule</div>
+        </li>
     </nav>
