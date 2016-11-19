@@ -12,8 +12,8 @@ export const routes: Routes = [
     loadChildren: 'app/components/login/login.module#LoginModule'
   },
   { 
-    path: 'welcome', 
-    loadChildren: 'app/components/welcome/welcome.module#WelcomeModule',
+    path: 'user-schedules', 
+    loadChildren: 'app/components/user-schedules/user-schedules.module#UserSchedulesModule',
     canActivate: [AuthGaurdService] 
   },
   { 
