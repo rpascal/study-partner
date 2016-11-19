@@ -2,15 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../../services/firebase/firebase.service'
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
-
 @Component({
-  selector: 'app-Register',
-  templateUrl: './Register.component.html',
-  styleUrls: ['./Register.component.css']
+  selector: 'app-register-user',
+  templateUrl: './register-user.component.html',
+  styleUrls: ['./register-user.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterUserComponent implements OnInit {
 
-    username: string;
+     username: string;
   password: string;
 
   constructor(public fb: FirebaseService) { }
@@ -20,7 +19,7 @@ export class RegisterComponent implements OnInit {
   }
 
   register(): void {
-    this.fb.register(this.username, this.password);
+    //this.fb.register(this.username, this.password);
   }
 
 

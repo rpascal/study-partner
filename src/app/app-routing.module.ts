@@ -11,6 +11,11 @@ export const routes: Routes = [
     path: 'login', 
     loadChildren: 'app/components/login/login.module#LoginModule'
   },
+  
+  { 
+    path: 'register', 
+    loadChildren: 'app/components/register-user/register-user.module#RegisterUserModule'
+  },
   { 
     path: 'user-schedules', 
     loadChildren: 'app/components/user-schedules/user-schedules.module#UserSchedulesModule',
@@ -27,10 +32,6 @@ export const routes: Routes = [
     canActivate: [AuthGaurdService] 
   },
 
-  { 
-    path: 'register', 
-    loadChildren: 'app/components/register/register.module#RegisterModule'
-  },
 ];
 
 @NgModule({

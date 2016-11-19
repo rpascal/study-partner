@@ -1,11 +1,11 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
-import { RegisterComponent } from './register.component';
+import { RegisterUserComponent } from './register-user.component';
 
-describe('Component: Register', () => {
+describe('Component: RegisterUser', () => {
   it('should create an instance', () => {
-    let component = new RegisterComponent();
+    let component = new RegisterUserComponent();
     expect(component).toBeTruthy();
   });
 });

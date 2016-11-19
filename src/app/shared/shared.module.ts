@@ -10,6 +10,7 @@ import {UserService} from '../services/user/user.service';
 import {InstructorService} from '../services/instructor/instructor.service';
 import {CourseService} from '../services/courses/course.service';
 
+
 @NgModule({
   imports:      [ CommonModule ],
   declarations: [],
