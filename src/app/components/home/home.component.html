@@ -2,3 +2,9 @@
 <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#addClassModal">
  Launch add class
 </button>
+
+  <ul>
+    <li *ngFor="let item of items | async">
+      {{ item.age }}
+    </li>
+  </ul>
