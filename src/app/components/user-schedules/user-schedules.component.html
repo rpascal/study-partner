@@ -27,3 +27,13 @@
     </div>
 
 </div>
+
+<div  *ngIf='overlaps'>
+
+    <div *ngFor="let lis of overlaps">
+      <p class=" col-xs-8 col-sm-8 col-md-8 bg-primary " (click)="onSelectClass(lis)">
+        {{lis.min}} | {{lis.otherName}}
+      </p>
+    </div>
+
+</div>
